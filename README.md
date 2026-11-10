@@ -111,4 +111,5 @@
 Официальная документация Telegram по проверке `initData`: https://core.telegram.org/bots/webapps#validating-data-received-via-the-mini-app
 #   U s e r S p i n B o t 2  
  #   U s e r S p i n B o t 2  
+ #   U s e r S p i n B o t 2  
  

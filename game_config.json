@@ -1,0 +1,417 @@
+{
+  "ACHIEVEMENTS": [
+    {
+      "id": "first_spin",
+      "name": "Первая крутка",
+      "desc": "Сделать первую крутку",
+      "reward": 50,
+      "target": 1,
+      "key": "totalSpins"
+    },
+    {
+      "id": "spins_10",
+      "name": "10 круток",
+      "desc": "Сделать 10 круток",
+      "reward": 300,
+      "target": 10,
+      "key": "totalSpins"
+    },
+    {
+      "id": "spins_50",
+      "name": "50 круток",
+      "desc": "Сделать 50 круток",
+      "reward": 2000,
+      "target": 50,
+      "key": "totalSpins"
+    },
+    {
+      "id": "spins_100",
+      "name": "100 круток",
+      "desc": "Сделать 100 круток",
+      "reward": 5000,
+      "target": 100,
+      "key": "totalSpins"
+    },
+    {
+      "id": "spins_500",
+      "name": "500 круток",
+      "desc": "Сделать 500 круток",
+      "reward": 50000,
+      "target": 500,
+      "key": "totalSpins"
+    },
+    {
+      "id": "spins_1000",
+      "name": "1000 круток",
+      "desc": "Сделать 1000 круток",
+      "reward": 200000,
+      "target": 1000,
+      "key": "totalSpins"
+    },
+    {
+      "id": "spins_5000",
+      "name": "5000 круток",
+      "desc": "Сделать 5000 круток",
+      "reward": 2000000,
+      "target": 5000,
+      "key": "totalSpins"
+    },
+    {
+      "id": "only_letters",
+      "name": "Только буквы",
+      "desc": "Выбить 10 юзов из одних букв",
+      "reward": 2000,
+      "target": 10,
+      "key": "lettersOnly"
+    },
+    {
+      "id": "only_digits",
+      "name": "Только цифры",
+      "desc": "Выбить 10 юзов из одних цифр",
+      "reward": 2000,
+      "target": 10,
+      "key": "digitsOnly"
+    },
+    {
+      "id": "triple_digit",
+      "name": "Три одинаковые цифры",
+      "desc": "Выбить 5 юзов типа 111, 222, 333",
+      "reward": 15000,
+      "target": 5,
+      "key": "tripleDigit"
+    },
+    {
+      "id": "all_same_1",
+      "name": "Хоть один одинаковый",
+      "desc": "Выбить 1 юз из одинаковых символов",
+      "reward": 5000,
+      "target": 1,
+      "key": "allSame"
+    },
+    {
+      "id": "all_same",
+      "name": "Все символы одинаковые",
+      "desc": "Выбить 3 юза типа aaa, 55555",
+      "reward": 50000,
+      "target": 3,
+      "key": "allSame"
+    },
+    {
+      "id": "palindrome",
+      "name": "Палиндром",
+      "desc": "Выбить 10 палиндромов",
+      "reward": 10000,
+      "target": 10,
+      "key": "palindrome"
+    },
+    {
+      "id": "len8",
+      "name": "Восьмизнак",
+      "desc": "Выбить юз из 8 символов",
+      "reward": 2000,
+      "target": 1,
+      "key": "len8Count"
+    },
+    {
+      "id": "rare_25",
+      "name": "25 редких",
+      "desc": "Получить 25 редких юзов",
+      "reward": 8000,
+      "target": 25,
+      "key": "rareCount"
+    },
+    {
+      "id": "first_epic",
+      "name": "Первый эпик",
+      "desc": "Получить 5 эпических юзов",
+      "reward": 3000,
+      "target": 5,
+      "key": "epicCount"
+    },
+    {
+      "id": "epic_50",
+      "name": "50 эпиков",
+      "desc": "Получить 50 эпических юзов",
+      "reward": 150000,
+      "target": 50,
+      "key": "epicCount"
+    },
+    {
+      "id": "first_legendary",
+      "name": "Первая легендарка",
+      "desc": "Получить 3 легендарных юза",
+      "reward": 30000,
+      "target": 3,
+      "key": "legendaryCount"
+    },
+    {
+      "id": "legendary_10",
+      "name": "10 легендарок",
+      "desc": "Получить 10 легендарных юзов",
+      "reward": 400000,
+      "target": 10,
+      "key": "legendaryCount"
+    },
+    {
+      "id": "first_mythic",
+      "name": "Первый мифик",
+      "desc": "Получить мифический юз",
+      "reward": 200000,
+      "target": 1,
+      "key": "mythicCount"
+    },
+    {
+      "id": "mythic_5",
+      "name": "5 мификов",
+      "desc": "Получить 5 мифических юзов",
+      "reward": 3000000,
+      "target": 5,
+      "key": "mythicCount"
+    },
+    {
+      "id": "first_secret",
+      "name": "Первый секрет",
+      "desc": "Получить секретный юз",
+      "reward": 1000000,
+      "target": 1,
+      "key": "secretCount"
+    },
+    {
+      "id": "secret_3",
+      "name": "3 секрета",
+      "desc": "Получить 3 секретных юза",
+      "reward": 10000000,
+      "target": 3,
+      "key": "secretCount"
+    },
+    {
+      "id": "first_exclusive",
+      "name": "Эксклюзив",
+      "desc": "Получить эксклюзивный юз",
+      "reward": 5000000,
+      "target": 1,
+      "key": "exclusiveCount"
+    },
+    {
+      "id": "exclusive_3",
+      "name": "3 эксклюзива",
+      "desc": "Получить 3 эксклюзивных юза",
+      "reward": 50000000,
+      "target": 3,
+      "key": "exclusiveCount"
+    },
+    {
+      "id": "big_win",
+      "name": "Крупный выигрыш",
+      "desc": "Выбить юз на 500 000+ $ один раз",
+      "reward": 20000,
+      "target": 1,
+      "key": "bigWin"
+    },
+    {
+      "id": "big_win_10",
+      "name": "10 крупных выигрышей",
+      "desc": "Выбить 10 юзов на 500 000+ $",
+      "reward": 400000,
+      "target": 10,
+      "key": "bigWin"
+    },
+    {
+      "id": "inv_10",
+      "name": "10 в инвентаре",
+      "desc": "Собрать 10 юзов в инвентаре",
+      "reward": 3000,
+      "target": 10,
+      "key": "maxInventory"
+    },
+    {
+      "id": "inv_50",
+      "name": "50 в инвентаре",
+      "desc": "Собрать 50 юзов в инвентаре",
+      "reward": 60000,
+      "target": 50,
+      "key": "maxInventory"
+    },
+    {
+      "id": "bal_1m",
+      "name": "Миллионер",
+      "desc": "Накопить 1 000 000 $",
+      "reward": 50000,
+      "target": 1000000,
+      "key": "maxBalance"
+    },
+    {
+      "id": "bal_10m",
+      "name": "Мультимиллионер",
+      "desc": "Накопить 10 000 000 $",
+      "reward": 1000000,
+      "target": 10000000,
+      "key": "maxBalance"
+    },
+    {
+      "id": "bal_100m",
+      "name": "Сотка миллионов",
+      "desc": "Накопить 100 000 000 $",
+      "reward": 10000000,
+      "target": 100000000,
+      "key": "maxBalance"
+    }
+  ],
+  "MODES": [
+    {
+      "id": "common",
+      "name": "Обычный",
+      "cost": 100,
+      "desc": "Мифик 0.00001%"
+    },
+    {
+      "id": "uncommon",
+      "name": "Необычный",
+      "cost": 200,
+      "desc": "Мифик 0.00005%"
+    },
+    {
+      "id": "rare",
+      "name": "Редкий",
+      "cost": 10000,
+      "desc": "Мифик 0.0001%"
+    },
+    {
+      "id": "epic",
+      "name": "Эпический",
+      "cost": 100000,
+      "desc": "Гарант эпик, лега 1%, мифик 0.001%"
+    },
+    {
+      "id": "legendary",
+      "name": "Легендарный",
+      "cost": 1000000,
+      "desc": "Мифик 0.5%, лега 20%"
+    }
+  ],
+  "LENGTH_OPTIONS": [
+    {
+      "len": 0,
+      "label": "Любая длина",
+      "mult": 1,
+      "multText": ""
+    },
+    {
+      "len": 3,
+      "label": "3 символа",
+      "mult": 1.8,
+      "multText": "×1.8"
+    },
+    {
+      "len": 4,
+      "label": "4 символа",
+      "mult": 1.5,
+      "multText": "×1.5"
+    },
+    {
+      "len": 5,
+      "label": "5 символов",
+      "mult": 1.2,
+      "multText": "×1.2"
+    },
+    {
+      "len": 6,
+      "label": "6 символов",
+      "mult": 1,
+      "multText": "×1.0"
+    },
+    {
+      "len": 7,
+      "label": "7 символов",
+      "mult": 1,
+      "multText": "×1.0"
+    },
+    {
+      "len": 8,
+      "label": "8 символов",
+      "mult": 1,
+      "multText": "×1.0"
+    }
+  ],
+  "AUTO_LEVELS": [
+    {
+      "level": 0,
+      "name": "Выкл",
+      "desc": "Ничего не отправляется"
+    },
+    {
+      "level": 1,
+      "name": "Всё",
+      "desc": "Все юзы идут в инвентарь"
+    },
+    {
+      "level": 2,
+      "name": "Эпик+",
+      "desc": "Эпические и выше"
+    },
+    {
+      "level": 3,
+      "name": "Легенд+",
+      "desc": "Легендарные и выше"
+    },
+    {
+      "level": 4,
+      "name": "Миф",
+      "desc": "Только мифические"
+    }
+  ],
+  "EXCLUSIVE_TAGS": [
+    "admin",
+    "moderator",
+    "root",
+    "ceo",
+    "owner",
+    "support",
+    "system",
+    "boss",
+    "king",
+    "news",
+    "happy",
+    "007",
+    "00000",
+    "aaa",
+    "xxx",
+    "000",
+    "111"
+  ],
+  "SECRET_TAGS": [
+    "go",
+    "ok",
+    "hi",
+    "no",
+    "me",
+    "aa",
+    "bb",
+    "cc",
+    "xx",
+    "zz",
+    "00",
+    "11",
+    "22",
+    "77",
+    "88",
+    "99"
+  ],
+  "LEVEL_THRESHOLDS": [
+    0,
+    10,
+    25,
+    50,
+    100,
+    200,
+    400,
+    800,
+    1500,
+    3000,
+    6000,
+    12000,
+    25000,
+    50000,
+    100000
+  ]
+}
