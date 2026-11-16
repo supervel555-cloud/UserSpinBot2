@@ -80,34 +80,80 @@ def quote(mode: str, length: int, count: int = 1) -> dict[str, Any]:
             'unit_cost': unit, 'total_cost': unit * count}
 
 
-def pick_tag(length: int, unavailable: set[str], guarantees: dict[str, int]) -> tuple[str, str | None]:
-    def eligible(tags):
-        return [t for t in tags if (length == 0 or len(t) == length) and t not in unavailable]
-    for field, tags, forced_name in (('exclusive', EXCLUSIVE, 'Эксклюзивный'),
-                                     ('secret', SECRET, 'Секретный')):
-        if guarantees.get(field, 0) > 0:
-            candidates = eligible(tags)
+def pick_tag(
+        length: int,
+        unavailable: set[str],
+        guarantees: dict[str, int]
+    ) -> tuple[str, str | None]:
+
+        def eligible(tags, target_length=length):
+            return [
+                tag for tag in tags
+                if (target_length == 0 or len(tag) == target_length)
+                and tag not in unavailable
+            ]
+
+        # Гарантированные эксклюзивные и секретные юзы
+        for field, tags, forced_name in (
+            ('exclusive', EXCLUSIVE, 'Эксклюзивный'),
+            ('secret', SECRET, 'Секретный')
+        ):
+            if guarantees.get(field, 0) > 0:
+                candidates = eligible(tags)
+
+                if candidates:
+                    guarantees[field] -= 1
+                    return RNG.choice(candidates), forced_name
+
+                guarantees[field] = 0
+
+        # Случайные эксклюзивные и секретные юзы
+        if RNG.random() < 0.0001:
+            candidates = eligible(EXCLUSIVE)
             if candidates:
-                guarantees[field] -= 1
-                return RNG.choice(candidates), forced_name
-            guarantees[field] = 0
-    if RNG.random() < .0001:
-        candidates = eligible(EXCLUSIVE)
-        if candidates: return RNG.choice(candidates), 'Эксклюзивный'
-    if RNG.random() < .001:
-        candidates = eligible(SECRET)
-        if candidates: return RNG.choice(candidates), 'Секретный'
-    # Вариант учебных генераторов Велимира. Исключаем невалидные и занятые теги.
-    if RNG.random() < .1:
-        fn = RNG.choice((generate_username, generate_by_pattern, generate_leet))
-        for _ in range(8):
-            tag = fn()
-            if 3 <= len(tag) <= 8 and (length == 0 or len(tag) == length) and tag not in unavailable:
-                return tag, None
-    candidates = eligible(POOL)
-    if not candidates:
-        raise ValueError('Нет доступных юзов выбранной длины')
-    return RNG.choice(candidates), None
+                return RNG.choice(candidates), 'Эксклюзивный'
+
+        if RNG.random() < 0.001:
+            candidates = eligible(SECRET)
+            if candidates:
+                return RNG.choice(candidates), 'Секретный'
+
+        # НОВОЕ: выбираем длину по заданным вероятностям
+        if length == 0:
+            target_length = RNG.choices(
+                population=[2, 3, 4, 5, 6, 7, 8],
+                weights=[0.1, 2.9, 18, 6, 11, 27, 35],
+                k=1
+            )[0]
+        else:
+            target_length = length
+
+        # Генераторы Велимира
+        if RNG.random() < 0.1:
+            fn = RNG.choice((
+                generate_username,
+                generate_by_pattern,
+                generateleet
+            ))
+
+            for _ in range(8):
+                tag = fn()
+
+                if (
+                    len(tag) == target_length
+                    and tag not in unavailable
+                ):
+                    return tag, None
+
+        # Выбираем обычный юз нужной длины
+        candidates = eligible(POOL, target_length)
+
+        if not candidates:
+            raise ValueError(
+                'Нет доступных юзов выбранной длины'
+            )
+
+        return RNG.choice(candidates), None
 
 
 def get_multiplier(tag: str, luck: int = 1) -> tuple[int, list[str]]:
